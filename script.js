@@ -1,4 +1,4 @@
-//Untuk pertanyaan dan jawaban
+//99Untuk pertanyaan dan jawaban
 const questions = [
         {
             question: "who i want to kill?",
@@ -37,13 +37,15 @@ function showQuestion(){
 
     currentQuestion.answers.forEach(answers => {
         const button= document.createElement("button");
-        // answer.text, untuk mengisi pertanyaan
+        // answer.text, untuk mengisi teks jawaban ke button
         button.innerHTML = answers.text;
         answerButton.appendChild(button);
+        button.dataset.correct = answers.correct;
+        button.addEventListener("click", selectAnswer)
     });
 }
 
-//biar tulisan yang html ga keliatan
+//untuk reset tampilan sebelum pertanyaan baru muncul
 function resetState(){
     nextButton.style.display = "none";
     while(answerButton.firstChild){
