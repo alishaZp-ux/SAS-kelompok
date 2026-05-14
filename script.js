@@ -1,4 +1,4 @@
-//99Untuk pertanyaan dan jawaban
+    //99Untuk pertanyaan dan jawaban
 const questions = [
         {
             question: "who i want to kill?",
@@ -9,7 +9,78 @@ const questions = [
                 {text: "Roderich Edelstein", correct: false}
             ]
         },
-    
+        {
+            question: "who i want to ???",
+            answers: [
+                {text: "Nakajima Atsushi", correct: false},
+                {text: "Haruhi", correct: false},
+                {text: "Tsukasa YUGI", correct: false},
+                {text: "Roderich Edelstein", correct: true}
+            ]
+        },
+        {
+            question: "who i want to ???",
+            answers: [
+                {text: "Nakajima Atsushi", correct: false},
+                {text: "Haruhi", correct: false},
+                {text: "Tsukasa YUGI", correct: false},
+                {text: "Roderich Edelstein", correct: true}
+            ]
+        },
+        {
+            question: "who i want to ???",
+            answers: [
+                {text: "Nakajima Atsushi", correct: false},
+                {text: "Haruhi", correct: false},
+                {text: "Tsukasa YUGI", correct: false},
+                {text: "Roderich Edelstein", correct: true}
+            ]
+        },
+        {
+            question: "who i want to ???",
+            answers: [
+                {text: "Nakajima Atsushi", correct: false},
+                {text: "Haruhi", correct: false},
+                {text: "Tsukasa YUGI", correct: false},
+                {text: "Roderich Edelstein", correct: true}
+            ]
+        },
+        {
+            question: "who i want to ???",
+            answers: [
+                {text: "Nakajima Atsushi", correct: false},
+                {text: "Haruhi", correct: false},
+                {text: "Tsukasa YUGI", correct: false},
+                {text: "Roderich Edelstein", correct: true}
+            ]
+        },
+        {
+            question: "who i want to ???",
+            answers: [
+                {text: "Nakajima Atsushi", correct: false},
+                {text: "Haruhi", correct: false},
+                {text: "Tsukasa YUGI", correct: false},
+                {text: "Roderich Edelstein", correct: true}
+            ]
+        },
+        {
+            question: "who i want to ???",
+            answers: [
+                {text: "Nakajima Atsushi", correct: false},
+                {text: "Haruhi", correct: false},
+                {text: "Tsukasa YUGI", correct: false},
+                {text: "Roderich Edelstein", correct: true}
+            ]
+        },
+        {
+            question: "who i want to ???",
+            answers: [
+                {text: "Nakajima Atsushi", correct: false},
+                {text: "Haruhi", correct: false},
+                {text: "Tsukasa YUGI", correct: false},
+                {text: "Roderich Edelstein", correct: true}
+            ]
+        },
         {
             question: "who i want to ???",
             answers: [
@@ -19,7 +90,8 @@ const questions = [
                 {text: "Roderich Edelstein", correct: true}
             ]
         }
-    ]
+    ];
+    //99Untuk pertanyaan dan jawaban
 
 //Agar bisa mengisi pertanyaan dan jawaban kosong?
 const questionElement = document.getElementById("question");
@@ -35,6 +107,7 @@ function startQuiz(){
     resetState();
     currentQuestionIndex = 0;
     score = 0;
+    //innerHTML dipakai untuk mendapatkan dan mengubah kode isi HTML di dalam elemen, seperti teks dalam html diubah?
     nextButton.innerHTML = "Next";
     showQuestion();
 }
@@ -42,14 +115,14 @@ function startQuiz(){
 function showQuestion(){
     resetState();
     let currentQuestion = questions[currentQuestionIndex];
-    let questionNo = currentQuestionIndex + 1;
+    let questionNo = currentQuestionIndex + 1; //untuk memberi nomer pada setiap soal
     questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
 
     currentQuestion.answers.forEach(answers => {
         const button= document.createElement("button");
         // answer.text, untuk mengisi teks jawaban ke button
         button.innerHTML = answers.text;
-        //Child untuk mengatur isi Parent, seperti div, section, ul, dll?
+        //Child adalah elemen dalam Parent, seperti div, section, ul, dan sebagainy?
         answerButton.appendChild(button);
         button.dataset.correct = answers.correct;
         button.addEventListener("click", selectAnswer)
@@ -64,14 +137,14 @@ function resetState(){
     }
 }
 
-//buat ngasih warna?
+//buat ngecek jawaban
 function selectAnswer(e){
     const selectedButton = e.target;
     const isCorrect = selectedButton.dataset.correct === "true";
     if(isCorrect){
         //classList untuk menambah class untuk css
         selectedButton.classList.add("correct");
-
+        score++;
     } else {
         selectedButton.classList.add("incorrect");
     }
@@ -84,7 +157,33 @@ function selectAnswer(e){
     });
     nextButton.style.display="block";
 
-    } 
+    }
+
+function showScore(){
+    resetState();
+    questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
+    nextButton.innerHTML = "play again?";
+    nextButton.style.display= "block";
+}
+
+function handleNextButton(){
+    // ++ digunakan untuk increment, menambah nilai variabel sebesar 1
+    currentQuestionIndex++;
+    if(currentQuestionIndex < questions.length){
+        showQuestion();
+    } else {
+        showScore();
+    }
+}
+    
+nextButton.addEventListener("click", ()=>{
+    if(currentQuestionIndex < questions.length){
+        handleNextButton();
+    } else{
+        startQuiz();
+    }
+});
 
 startQuiz();
 //If you're code is not working then call the startquiz function in the last
+//let=bisa diubah nilainya; const=ga bisa diubah nilainya
