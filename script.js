@@ -8,8 +8,18 @@ const questions = [
                 {text: "Tsukasa YUGI", correct: true},
                 {text: "Roderich Edelstein", correct: false}
             ]
+        },
+    
+        {
+            question: "who i want to kiss?",
+            answers: [
+                {text: "Nakajima Atsushi", correct: false},
+                {text: "Haruhi", correct: false},
+                {text: "Tsukasa YUGI", correct: false},
+                {text: "Roderich Edelstein", correct: true}
+            ]
         }
-    ];
+    ]
 
 //Agar bisa mengisi pertanyaan dan jawaban kosong?
 const questionElement = document.getElementById("question");
@@ -39,6 +49,7 @@ function showQuestion(){
         const button= document.createElement("button");
         // answer.text, untuk mengisi teks jawaban ke button
         button.innerHTML = answers.text;
+        //Child untuk mengatur isi Parent, seperti div, section, ul, dll?
         answerButton.appendChild(button);
         button.dataset.correct = answers.correct;
         button.addEventListener("click", selectAnswer)
@@ -53,15 +64,27 @@ function resetState(){
     }
 }
 
+//buat ngasih warna?
 function selectAnswer(e){
     const selectedButton = e.target;
     const isCorrect = selectedButton.dataset.correct === "true";
     if(isCorrect){
+        //classList untuk menambah class untuk css
         selectedButton.classList.add("correct");
+        
     } else {
         selectedButton.classList.add("incorrect");
     }
-} 
+    
+    Array.from(answerButton.children).forEach(button =>{
+        if(button.dataset.correct==="true"){
+            button.classList.add("correct");
+        }
+        button.disabled = true;
+    });
+    nextButton.style.display="block";
+
+    } 
 
 startQuiz();
 //If you're code is not working then call the startquiz function in the last
