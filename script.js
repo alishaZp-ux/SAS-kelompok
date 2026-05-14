@@ -97,6 +97,7 @@ const questions = [
 const questionElement = document.getElementById("question");
 const answerButton = document.getElementById("answer-buttons");
 const nextButton = document.getElementById("next-btn");
+const awardBtn = document.getElementById("award-btn");
 
 //untuk setting score dan pertanyaan awal
 let currentQuestionIndex = 0;
@@ -109,6 +110,7 @@ function startQuiz(){
     score = 0;
     //innerHTML dipakai untuk mendapatkan dan mengubah kode isi HTML di dalam elemen, seperti teks dalam html diubah?
     nextButton.innerHTML = "Next";
+    awardBtn.style.display = "none";
     showQuestion();
 }
 
@@ -161,9 +163,16 @@ function selectAnswer(e){
 
 function showScore(){
     resetState();
-    questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
-    nextButton.innerHTML = "play again?";
-    nextButton.style.display= "block";
+
+    if(score === questions.length) {
+        questionElement.innerHTML = `Selamat nilaimu ${score} dari ${questions.length} 🥳🥳🥳!`;
+        awardBtn.innerHTML = "Ambil hadiahmu!";
+        awardBtn.style.display= "block";
+    } else {
+        questionElement.innerHTML = `Nilaimu ${score} dari ${questions.length}!`;
+        nextButton.innerHTML = "Main lagi?";
+        nextButton.style.display= "block";
+    }
 }
 
 function handleNextButton(){
@@ -184,6 +193,6 @@ nextButton.addEventListener("click", ()=>{
     }
 });
 
-startQuiz();
-//If you're code is not working then call the startquiz function in the last
+startQuiz(); //untuk menjalankan quiz
+
 //let=bisa diubah nilainya; const=ga bisa diubah nilainya
