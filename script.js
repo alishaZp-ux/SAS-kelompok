@@ -11,7 +11,7 @@ const questions = [
         },
     
         {
-            question: "who i want to kiss?",
+            question: "who i want to ???",
             answers: [
                 {text: "Nakajima Atsushi", correct: false},
                 {text: "Haruhi", correct: false},
@@ -26,11 +26,11 @@ const questionElement = document.getElementById("question");
 const answerButton = document.getElementById("answer-buttons");
 const nextButton = document.getElementById("next-btn");
 
-//untuk setting score dan pertanyaan awal?
+//untuk setting score dan pertanyaan awal
 let currentQuestionIndex = 0;
 let score = 0;
 
-//untuk ngeset score ke awal?
+//untuk ngeset score ke awal
 function startQuiz(){
     resetState();
     currentQuestionIndex = 0;
@@ -71,7 +71,7 @@ function selectAnswer(e){
     if(isCorrect){
         //classList untuk menambah class untuk css
         selectedButton.classList.add("correct");
-        
+
     } else {
         selectedButton.classList.add("incorrect");
     }
