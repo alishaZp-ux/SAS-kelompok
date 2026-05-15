@@ -97,7 +97,6 @@ const questions = [
 const questionElement = document.getElementById("question");
 const answerButton = document.getElementById("answer-buttons");
 const nextButton = document.getElementById("next-btn");
-const awardBtn = document.getElementById("award-btn");
 
 //untuk setting score dan pertanyaan awal
 let currentQuestionIndex = 0;
@@ -110,7 +109,6 @@ function startQuiz(){
     score = 0;
     //innerHTML dipakai untuk mendapatkan dan mengubah kode isi HTML di dalam elemen, seperti teks dalam html diubah?
     nextButton.innerHTML = "Next";
-    awardBtn.style.display = "none";
     showQuestion();
 }
 
@@ -166,10 +164,18 @@ function showScore(){
 
     if(score === questions.length) {
         questionElement.innerHTML = `Selamat nilaimu ${score} dari ${questions.length} 🥳🥳🥳!`;
-        awardBtn.innerHTML = "Ambil hadiahmu!";
-        awardBtn.style.display= "block";
-    } else {
+        nextButton.innerHTML = "Main lagi?";
+        nextButton.style.display= "block";
+    }else if(score >= 5) {
         questionElement.innerHTML = `Nilaimu ${score} dari ${questions.length}!`;
+        nextButton.innerHTML = "Main lagi?";
+        nextButton.style.display= "block";
+    }else if(score >=3) {
+        questionElement.innerHTML = `Yah nilaimu ${score} dari ${questions.length}:(`;
+        nextButton.innerHTML = "Main lagi?";
+        nextButton.style.display= "block";
+    } else{
+        questionElement.innerHTML = `${score}/${questions.length} >:(`;
         nextButton.innerHTML = "Main lagi?";
         nextButton.style.display= "block";
     }
@@ -195,4 +201,4 @@ nextButton.addEventListener("click", ()=>{
 
 startQuiz(); //untuk menjalankan quiz
 
-//let=bisa diubah nilainya; const=ga bisa diubah nilainya
+//let=bisa diubah nilainya; const= nilai tetap, ga bisa diubah
