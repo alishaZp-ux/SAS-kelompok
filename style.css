@@ -5,10 +5,11 @@
     box-sizing: border-box;
 }
 body{
-    background: #001e4d;
+    background-color: #001e4d;
+    background-image: url(less.png);
 }
 .app{
-    background: #ffff;
+    background-color: #ffff;
     width: 90%;
     max-width: 600px;
     margin: 100px auto 0;
@@ -31,7 +32,7 @@ body{
     font-weight: 600;
 }
 .btn{
-    background: #fff;
+    background-color: #fff;
     color: #222;
     font-weight: 500;
     width: 100%;
@@ -44,11 +45,11 @@ body{
     transition: all 0.3s;
 }
 .btn:hover{
-    background: #222;
+    background-color: #222;
     color: #fff;
 }
 #next-btn{
-    background: #001e4d;
+    background-color: #001e4d;
     color: #fff;
     font-weight: 500;
     width: 150px;
@@ -61,7 +62,7 @@ body{
 }
 #award-btn{
     text-decoration: none;
-    background: #001e4d;
+    background-color: #001e4d;
     color: #fff;
     font-weight: 500;
     width: 150px;
