@@ -1,93 +1,93 @@
     //99Untuk pertanyaan dan jawaban
 const questions = [
         {
-            question: "who i want to kill?",
+            question: "Alat musik yang dimainkan dengan cara dipetik adalah ...",
             answers: [
-                {text: "Nakajima Atsushi", correct: false},
-                {text: "Haruhi", correct: false},
-                {text: "Tsukasa YUGI", correct: true},
-                {text: "Roderich Edelstein", correct: false}
+                {text: "Drum", correct: false},
+                {text: "Gitar", correct: true},
+                {text: "Biola", correct: false},
+                {text: "Suling", correct: false}
             ]
         },
         {
-            question: "who i want to ???",
+            question: "Angklung berasal dari …",
             answers: [
-                {text: "Nakajima Atsushi", correct: false},
-                {text: "Haruhi", correct: false},
-                {text: "Tsukasa YUGI", correct: false},
-                {text: "Roderich Edelstein", correct: true}
+                {text: "Bali", correct: false},
+                {text: "Papua", correct: false},
+                {text: "JAWA Barat", correct: true},
+                {text: "Kalimantan", correct: false}
             ]
         },
         {
-            question: "who i want to ???",
+            question: "Biola dimainkan dengan cara...",
             answers: [
-                {text: "Nakajima Atsushi", correct: false},
-                {text: "Haruhi", correct: false},
-                {text: "Tsukasa YUGI", correct: false},
-                {text: "Roderich Edelstein", correct: true}
+                {text: "Digesek", correct: true},
+                {text: "Dipukul", correct: false},
+                {text: "Ditiup", correct: false},
+                {text: "Dipetik", correct: false}
             ]
         },
         {
-            question: "who i want to ???",
+            question: "Contoh alat musik ditiup adalah...",
             answers: [
-                {text: "Nakajima Atsushi", correct: false},
-                {text: "Haruhi", correct: false},
-                {text: "Tsukasa YUGI", correct: false},
-                {text: "Roderich Edelstein", correct: true}
+                {text: "Kendang", correct: false},
+                {text: "Seruling", correct: true},
+                {text: "Gitar", correct: false},
+                {text: "Piano", correct: false}
             ]
         },
         {
-            question: "who i want to ???",
+            question: "Piano termasuk alat musik...",
             answers: [
-                {text: "Nakajima Atsushi", correct: false},
-                {text: "Haruhi", correct: false},
-                {text: "Tsukasa YUGI", correct: false},
-                {text: "Roderich Edelstein", correct: true}
+                {text: "Ritmis", correct: false},
+                {text: "Melodis", correct: true},
+                {text: "Tiup", correct: false},
+                {text: "Pukul", correct: false}
             ]
         },
         {
-            question: "who i want to ???",
+            question: "Kendang dimainkan dengan cara...",
             answers: [
-                {text: "Nakajima Atsushi", correct: false},
-                {text: "Haruhi", correct: false},
-                {text: "Tsukasa YUGI", correct: false},
-                {text: "Roderich Edelstein", correct: true}
+                {text: "Ditiup", correct: false},
+                {text: "Dipetik", correct: false},
+                {text: "Dipukul", correct: true},
+                {text: "Digesek", correct: false}
             ]
         },
         {
-            question: "who i want to ???",
+            question: "Contoh alat musik tradisional indonesia adalah...",
             answers: [
-                {text: "Nakajima Atsushi", correct: false},
-                {text: "Haruhi", correct: false},
-                {text: "Tsukasa YUGI", correct: false},
-                {text: "Roderich Edelstein", correct: true}
+                {text: "Biola", correct: false},
+                {text: "Angklung", correct: true},
+                {text: " Piano", correct: false},
+                {text: "Trompet", correct: true}
             ]
         },
         {
-            question: "who i want to ???",
+            question: "Fungsi alat musik ritmis adalah...",
             answers: [
-                {text: "Nakajima Atsushi", correct: false},
-                {text: "Haruhi", correct: false},
-                {text: "Tsukasa YUGI", correct: false},
-                {text: "Roderich Edelstein", correct: true}
+                {text: "Mengatur irama", correct: true},
+                {text: "Menghias Panggung", correct: false},
+                {text: "Mengatur lampu", correct: false},
+                {text: "Menghafal lagu", correct: false}
             ]
         },
         {
-            question: "who i want to ???",
+            question: "Gitar menghasilkan bunyi dari...",
             answers: [
-                {text: "Nakajima Atsushi", correct: false},
-                {text: "Haruhi", correct: false},
-                {text: "Tsukasa YUGI", correct: false},
-                {text: "Roderich Edelstein", correct: true}
+                {text: "Gagang pintu", correct: false},
+                {text: "Senar", correct: true},
+                {text: "Semen", correct: false},
+                {text: "Kambing", correct: false}
             ]
         },
         {
-            question: "who i want to ???",
+            question: "Drum termasuk alat musik...",
             answers: [
-                {text: "Nakajima Atsushi", correct: false},
-                {text: "Haruhi", correct: false},
-                {text: "Tsukasa YUGI", correct: false},
-                {text: "Roderich Edelstein", correct: true}
+                {text: "Melodis", correct: false},
+                {text: "Harmonis", correct: false},
+                {text: "Ritmis", correct: true},
+                {text: "Petik", correct: false}
             ]
         }
     ];
