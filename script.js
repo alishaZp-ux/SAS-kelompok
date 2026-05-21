@@ -60,7 +60,7 @@ const questions = [
                 {text: "Biola", correct: false},
                 {text: "Angklung", correct: true},
                 {text: " Piano", correct: false},
-                {text: "Trompet", correct: true}
+                {text: "Trompet", correct: false}
             ]
         },
         {
