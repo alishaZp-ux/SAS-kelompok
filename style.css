@@ -59,3 +59,18 @@ body{
     cursor: pointer;
     display: none;
 }
+
+.btn:hover:not([disabled]){
+    background-image: #222;
+    color: #fff;
+}
+.btn:disabled{
+  cursor: no-drop;
+}
+  .correct{
+    background: #9aeabc;
+}
+.incorrect{
+    background: #ff9393;
+}
+
