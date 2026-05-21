@@ -122,6 +122,9 @@ function showQuestion(){
         const button= document.createElement("button");
         // answer.text, untuk mengisi teks jawaban ke button
         button.innerHTML = answers.text;
+
+        button.classList.add("btn"); //untuk menyambung dengan class btn(.btn)
+
         //Child adalah elemen dalam Parent, seperti div, section, ul, dan sebagainy?
         answerButton.appendChild(button);
         button.dataset.correct = answers.correct;
