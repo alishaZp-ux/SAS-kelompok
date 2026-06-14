@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 body{
-    background-color: #2a255f;
+    background-color: #2f255f;
 }
 .app{
     background-color: #ffff;
@@ -74,3 +74,30 @@ body{
     background: #ff9393;
 }
 
+#tambah{
+    background-color: #21193d;
+    color: #fff;
+    font-weight: 500;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+
+#hapus{
+    background-color: #21193d;
+    color: #fff;
+    font-weight: 500;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}

@@ -220,15 +220,14 @@ function tambahSoal() {
     if (benar === null) return
 
     const jawabanBenar = benar.toUpperCase(); // toUpperCase membuat huruf menjadi kapital semuaaa
-    }
 
     questions.push({ // push digunakan untuk menambah data di akhir array
         question: soal,
         answers: [
-            {text: a, correct: benar === "A"},
-            {text: b, correct: benar === "B"},
-            {text: c, correct: benar === "C"},
-            {text: d, correct: benar === "D"} // untuk mengecek true atau false berdasarkan hasil input
+            {text: a, correct: jawabanBenar === "A"},
+            {text: b, correct: jawabanBenar === "B"},
+            {text: c, correct: jawabanBenar === "C"},
+            {text: d, correct: jawabanBenar === "D"} // untuk mengecek true atau false berdasarkan hasil input
         ]
     });
 
@@ -239,6 +238,7 @@ function tambahSoal() {
     );
 
     alert("Soal berhasil disimpan!");
+}
 
 
 function hapusSoal() {
