@@ -204,4 +204,74 @@ nextButton.addEventListener("click", ()=>{
 
 startQuiz(); //untuk menjalankan quiz
 
-//let=bisa diubah nilainya; const= nilai tetap, ga bisa diubah
+function tambahSoal() {
+    const soal = prompt("Masukkan soal:");
+
+    const a = prompt("Jawaban A:");
+    const b = prompt("Jawaban B:");
+    const c = prompt("Jawaban C:");
+    const d = prompt("Jawaban D:");
+
+    const benar = prompt(
+        "Jawaban benar? (A/B/C/D)"
+    );
+    //hasil input dari prompt hampir semua dibaca sebagai string
+
+    if (benar === null) return
+
+    const jawabanBenar = benar.toUpperCase(); // toUpperCase membuat huruf menjadi kapital semuaaa
+    }
+
+    questions.push({ // push digunakan untuk menambah data di akhir array
+        question: soal,
+        answers: [
+            {text: a, correct: benar === "A"},
+            {text: b, correct: benar === "B"},
+            {text: c, correct: benar === "C"},
+            {text: d, correct: benar === "D"} // untuk mengecek true atau false berdasarkan hasil input
+        ]
+    });
+
+    //untuk menyimpan soal di local?
+    localStorage.setItem(
+        "questions",
+        JSON.stringify(questions)
+    );
+
+    alert("Soal berhasil disimpan!");
+
+
+function hapusSoal() {
+    let daftar = "";
+
+    questions.forEach((soal, index) => {
+        daftar += `${index + 1}. ${soal.question}\n`;
+    });
+
+    const nomor = prompt(
+        `Daftar soal:\n\n${daftar}\n Masukkan nomor soal yang ingin dihapus:`
+    );
+    // \n digunakan untuk menambahkan baris baru
+
+    if (nomor === null) return;
+
+    const index = parseInt(nomor) - 1; //parseInt digunakan mengubah string ke integer, ada juga parseFloat
+    // -1 digunakan untuk mengurangi angka yang di input sebanyak 1
+
+    if (isNaN(index) || index < 0 || index >= questions.length) {
+        alert("Nomor tidak valid!");
+        return;
+    } //isNaN digunakan untuk mengecek mana yg bukan angka
+
+    questions.splice(index, 1); //splice digunakan untuk menambah, menghapus, atau mengganti isi array
+
+    localStorage.setItem(
+        "questions",
+        JSON.stringify(questions)
+    );
+
+    alert("Soal berhasil dihapus!");
+}
+
+//let=bisa diubah nilainya; const= nilai tetap dan tidak bisa diubah, tetapi isi object/array masih bisa diubah
+//forEach untuk mengulang setiap isi array satu - persatu
